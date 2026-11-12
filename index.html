@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PinkSky Weather</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated background -->
+<div class="background">
+    <div class="cloud cloud1">☁️</div>
+    <div class="cloud cloud2">☁️</div>
+    <div class="cloud cloud3">☁️</div>
+    <div class="cloud cloud4">☁️</div>
+    <div class="cloud cloud5">☁️</div>
+</div>
+
+
+    <div class="app">
+
+        <!-- Header -->
+
+        <header>
+
+            <div class="logo">
+                ☁ PinkSky
+            </div>
+
+            <div class="date-time">
+                <span id="date">Loading...</span>
+                <span id="time">--:--</span>
+            </div>
+
+        </header>
+
+
+        <!-- Search -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Search for a city..."
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <p id="error"></p>
+
+
+        <!-- Current Weather -->
+
+        <section class="current-weather">
+
+            <div class="location">
+
+                <span>📍</span>
+
+                <div>
+                    <h2 id="cityName">New Delhi</h2>
+                    <p id="country">India</p>
+                </div>
+
+            </div>
+
+
+            <div class="main-weather">
+
+                <div class="weather-symbol" id="weatherIcon">
+                    ☀️
+                </div>
+
+                <div class="temperature">
+                    <span id="temperature">--</span><sup>°C</sup>
+                </div>
+
+                <div class="description" id="description">
+                    Search for a city
+                </div>
+
+                <div class="feels">
+                    Feels like
+                    <strong id="feelsLike">--°C</strong>
+                </div>
+
+            </div>
+
+
+            <p class="weather-message">
+                Have a beautiful day ✨
+            </p>
+
+        </section>
+
+
+        <!-- Weather Details -->
+
+        <section class="details-section">
+
+            <h3>Today's Weather</h3>
+
+            <div class="details-grid">
+
+                <div class="info-card">
+                    <div class="info-icon">💧</div>
+
+                    <div>
+                        <p>Humidity</p>
+                        <strong id="humidity">--%</strong>
+                    </div>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="info-icon">💨</div>
+
+                    <div>
+                        <p>Wind Speed</p>
+                        <strong id="windSpeed">-- km/h</strong>
+                    </div>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="info-icon">👁️</div>
+
+                    <div>
+                        <p>Visibility</p>
+                        <strong id="visibility">-- km</strong>
+                    </div>
+                </div>
+
+
+                <div class="info-card">
+                    <div class="info-icon">🌡️</div>
+
+                    <div>
+                        <p>Pressure</p>
+                        <strong id="pressure">-- hPa</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Sunrise -->
+
+        <section class="sun-section">
+
+            <div class="sun-title">
+
+                <h3>Sunrise & Sunset</h3>
+
+                <span>☀️</span>
+
+            </div>
+
+
+            <div class="sun-content">
+
+                <div class="sun-item">
+
+                    <div class="sun-circle">
+                        🌅
+                    </div>
+
+                    <div>
+                        <p>Sunrise</p>
+                        <strong id="sunrise">--:--</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="sun-line"></div>
+
+
+                <div class="sun-item">
+
+                    <div class="sun-circle sunset">
+                        🌇
+                    </div>
+
+                    <div>
+                        <p>Sunset</p>
+                        <strong id="sunset">--:--</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Forecast -->
+
+        <section class="forecast-section">
+
+            <div class="forecast-heading">
+
+                <h3>5-Day Forecast</h3>
+
+                <span>Coming days</span>
+
+            </div>
+
+
+            <div class="forecast" id="forecast"></div>
+
+        </section>
+
+
+        <footer>
+            Made with ♡
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
